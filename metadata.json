@@ -1,0 +1,11 @@
+{
+  "name": "reidmv-puppet_cli_environment",
+  "version": "0.1.0",
+  "author": "Reid Vandewiele",
+  "license": "Apache-2.0",
+  "summary": "Custom fact to return cli-specified environment",
+  "source": "https://github.com/reidmv/puppet-module-puppet_cli_environment",
+  "project_page": "https://github.com/reidmv/puppet-module-puppet_cli_environment",
+  "tags": ["environment", "canary", "classifier"],
+  "dependencies": [ ]
+}
