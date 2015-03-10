@@ -1,4 +1,4 @@
-Facter.add(:puppet_cli_environment) do
+Facter.add(:agent_specified_environment) do
   setcode do
     # This will be nil if Puppet is not available.
     begin
@@ -6,7 +6,7 @@ Facter.add(:puppet_cli_environment) do
     rescue NameError
       nil
     else
-      Puppet[:environment] if Puppet.settings.setting(:environment).setbycli
+      Puppet[:environment]
     end
   end
 end
