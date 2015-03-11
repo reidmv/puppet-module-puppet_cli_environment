@@ -1,4 +1,4 @@
-Facter.add(:puppet_environment_setbycli) do
+Facter.add(:agent_specified_noop) do
   setcode do
     # This will be nil if Puppet is not available.
     begin
@@ -6,7 +6,7 @@ Facter.add(:puppet_environment_setbycli) do
     rescue NameError
       nil
     else
-      Puppet.settings.setting(:environment).setbycli
+      Puppet[:noop]
     end
   end
 end
