@@ -6,7 +6,7 @@ Facter.add(:agent_specified_environment_setbycli) do
     rescue NameError
       nil
     else
-      Puppet.settings.setting(:environment).setbycli
+      Puppet.settings.set_by_cli?(:environment)
     end
   end
 end

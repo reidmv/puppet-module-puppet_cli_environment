@@ -6,7 +6,7 @@ Facter.add(:agent_specified_noop_setbycli) do
     rescue NameError
       nil
     else
-      Puppet.settings.setting(:noop).setbycli
+      Puppet.settings.set_by_cli?(:noop)
     end
   end
 end
