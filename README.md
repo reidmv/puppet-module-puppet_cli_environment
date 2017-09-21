@@ -1,4 +1,4 @@
-# puppet_environment_facts
+# puppet\_environment\_facts
 
 This module provides custom facts which return the agent-side settings for
 environment and noop for the puppet run. Besides the value of the setting for
@@ -15,20 +15,24 @@ environment.
 
 ## Facts
 
-### agent_specified_environment
+### agent\_specified\_environment
 
-String. The agent-side value of the environment setting.
+This fact is NOT provided by this module, and is actually a fact built in to
+Puppet. `agent_specified_environment` is relevant to most use cases this module
+supports though, and prior to the fact being added to Puppet this module
+provided an implementation. Now that it's a built in fact, see the
+documentation for it [here](https://docs.puppet.com/puppet/latest/lang_facts_and_builtin_vars.html#puppet-agent-facts).
 
-### agent_specified_environment_setbycli
+### agent\_specified\_environment\_setbycli
 
 Boolean. Whether or not the environment setting was specified on the CLI (e.g.
 `--environment=dev`).
 
-### agent_specified_noop
+### agent\_specified\_noop
 
 Boolean. The agent-side value of the noop setting.
 
-### agent_specified_noop_setbycli
+### agent\_specified\_noop\_setbycli
 
 Boolean. Whether or not the environment setting was specified on the CLI (e.g.
 `--noop, or --no-noop`).
@@ -53,7 +57,7 @@ puppet.conf file does not specify an environment:
 
 These facts will return:
 
-    agent_specified_environment=production
+    agent_specified_environment=nil
     agent_specified_environment_setbycli=False
     agent_specified_noop=False
     agent_specified_noop_setbycli=False
